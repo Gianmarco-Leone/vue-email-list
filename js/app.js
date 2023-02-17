@@ -14,7 +14,23 @@ const app = Vue.createApp({
   data() {
     return {
       emailList: [],
+      emailMessageList: [
+        "Ok",
+        "Si",
+        "Tutto bene, tu?",
+        "Non posso rispondere",
+        "Non ho voglia di parlare",
+        "Non ho capito",
+        "Perfetto",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nostrum?",
+        "Verrà ricontattato appena possibile",
+      ],
     };
+  },
+  computed: {
+    messageListLength() {
+      return this.emailMessageList.length;
+    },
   },
   methods: {
     generateList() {
@@ -27,6 +43,11 @@ const app = Vue.createApp({
             this.emailList.push(result);
           });
       }
+    },
+
+    // Funzione per generare numero randomico tra due numeri
+    generateRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
     },
   },
 });

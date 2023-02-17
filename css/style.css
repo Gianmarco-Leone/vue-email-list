@@ -4,3 +4,67 @@ GENERICS
 ul {
   list-style: none;
 }
+
+/**********
+HEADER
+***********/
+.header-navbar {
+  height: 80px;
+  background-color: #212529;
+  border-bottom: 2px solid #cecfd2;
+}
+
+.header-navbar .circle {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: limegreen;
+  color: #212529;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/**********
+MAIN
+***********/
+main {
+  height: calc(100vh - 80px);
+  background-color: #212529;
+}
+
+main .my-card {
+  width: 80%;
+  height: 80vh;
+  border-radius: 20px;
+  background-color: #cecfd2;
+}
+
+/* MAIN NAVBAR */
+main .my-navbar {
+  height: 50px;
+  padding: 0 1rem;
+}
+
+.my-navbar .reload-icon {
+  cursor: pointer;
+}
+
+/* MAIN - CONTAINER */
+main ul {
+  max-height: calc(80vh - 100px);
+  overflow-y: auto;
+  background-color: #babcc0;
+}
+
+main ul li {
+  max-width: 90%;
+  min-height: 50px;
+  border-bottom: 1px solid #555;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+}
